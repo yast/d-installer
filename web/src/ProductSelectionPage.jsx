@@ -62,7 +62,8 @@ function ProductSelectionPage() {
 
     // TODO: handle errors
     client.software.selectProduct(selected)
-      .then(() => navigate("/"));
+      .then(() => navigate("/"))
+      .catch(err => alert(err));
   };
 
   if (!products) return (
