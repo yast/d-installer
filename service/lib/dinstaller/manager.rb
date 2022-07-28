@@ -89,6 +89,7 @@ module DInstaller
       security.probe
       network.probe
       testing_question
+      software.testing_question
 
       logger.info("Config phase done")
     rescue StandardError => e
