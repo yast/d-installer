@@ -236,10 +236,7 @@ module DInstaller
     end
 
     def questions_manager
-      logger.info "QMGR init"
-      @qmgr_proxy ||= DBus::Clients::QuestionsManager.new
-      logger.info "QMGR yes"
-      @qmgr_proxy
+      @questions_manager ||= DBus::Clients::QuestionsManager.new
     end
   end
 end
