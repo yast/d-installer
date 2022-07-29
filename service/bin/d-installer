@@ -53,7 +53,7 @@ def start_all_services
   ORDERED_SERVICES.map do |name|
     fork { exec("#{__FILE__} #{name}") }
     # TODO: implement a better mechanism to check whether the service is running
-    sleep(1)
+    sleep(3)
   end
 end
 
